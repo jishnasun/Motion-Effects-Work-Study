@@ -16,19 +16,6 @@ f = open(file_name, "w")
 # In the case that a txt file exists with this name, its contents will be erased and replaced with the new data
 f.close()
 f = open(file_name, "a")  #then reopen to begin appending data
-
-# Loop through each line of txt file and extract metadata from path
-
-#    pName = f"Patient Name: {ds.PatientName}\n"
-#     # modality = f"Modality: {ds.Modality}\n"
-#     # dob = f"Date of Birth: {ds.PatientBirthDate}\n"
-#     sex = f"Patient Sex: {ds.PatientSex}\n"
-#     age = f"Patient Age: {ds.PatientAge}\n"
-#     studyDate = f"Study Date: {ds.StudyDate}\n"
-#     studyTime = f"Study Start Time: {ds.StudyTime}\n"
-#     weight = f"Weight: {ds.PatientWeight}\n"
-#     height = f"Height: {ds.PatientSize}\n"
-#     operator = f"Operator: {ds.OperatorsName}\n"
  
 
 for line in pathf:
@@ -41,8 +28,6 @@ for line in pathf:
     
     # Extract basic metadata and check
     pName = f"{ds.PatientName}\t"
-    # modality = f"Modality: {ds.Modality}\n"
-    # dob = f"Date of Birth: {ds.PatientBirthDate}\n"
     sex = f"{ds.PatientSex}\t"
     age = f"{ds.PatientAge}\t"
     studyDate = f"{ds.StudyDate}\t"
@@ -55,23 +40,13 @@ for line in pathf:
     # Add meta data to txt file
     f.write(pName)
     f.write(operator)
-   # f.write(modality)
     f.write(age)
     f.write(sex)
     f.write(height)
     f.write(weight)
-    #f.write("Date format: YYYYMMDD\n")
-    #f.write(dob)
     f.write(studyDate)
     f.write(studyTime)
     f.write("\n")
-    
-    # Access specific DICOM tags
-    # print(f"Pixel Spacing: {ds[0x0028, 0x0030].value}")
-    
-    # Iterate through all data elements
-    # for elem in ds:
-    #     print(f"{elem.tag}: {elem.name} = {elem.value}")
 
 f.close() # close meta data file
 
