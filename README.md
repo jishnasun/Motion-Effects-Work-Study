@@ -4,7 +4,8 @@ All code created and used for the 2024-2025 work study at ToNI on motion effects
 Overview
 ========
 
-The code in this repository implements the following pipeline to estimate motion effects, represented by framewise displacement (FD), for a study with data in DICOM format. These are the steps in the pipeline
+The code in this repository implements the following pipeline to estimate motion effects, represented by framewise displacement (FD), for a study with data in DICOM format. 
+These are the steps in the pipeline:
 
 | Step | Used Script / Code                                       | Purpose                                                                                                                        |
 |------|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
